@@ -1,0 +1,38 @@
+body{
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/35/Taiyaki.jpg');
+  background-size: cover;
+}
+ul{
+  color:rgb(8, 8, 8);
+  font-size: 115%;
+  font-weight: 600;
+}
+ h2{
+  font-size:200%;
+  text-align: center;
+  color:darkblue;
+}
+h1{
+  font-size: 180%;
+  color: blueviolet;
+  float: right;
+  margin-left: 0%;
+  margin-right: 20%;
+}
+
+header{
+  border-style: dotted;
+}
+
+.leftImage{
+  float: left;
+}
+
+.rightImage{
+  float: right;
+}
+
+#headerControl{
+display: inline-block;
+align-content: space-between;
+}
