@@ -12,6 +12,7 @@ ul{
   text-align: center;
   color:darkblue;
 }
+
 h1{
   font-size: 180%;
   color: blueviolet;
@@ -24,11 +25,11 @@ header{
   border-style: dotted;
 }
 
-.leftImage{
+#leftImage{
   float: left;
 }
 
-.rightImage{
+#rightImage{
   float: right;
 }
 
@@ -38,7 +39,6 @@ align-content: space-between;
 }
 
 table, th, td{
-box-align: center;
 border: solid 2px rgb(29, 9, 9);
 border-spacing: 5px
 }
@@ -48,5 +48,10 @@ th, td{
 
 table{
   width: 85%;
+  margin: auto;
+}
 
+#rightImage, #leftImage{
+  height: 20%;
+  width: 20%;
 }
