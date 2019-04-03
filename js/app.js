@@ -63,7 +63,6 @@ function timeHeader(){
   report.appendChild(trEl);
 }
 
-
 function fillWithCookies(){
   for (var i=0;i<5;i++){
     var trEl= document.createElement('tr');
@@ -86,14 +85,9 @@ function fillWithCookies(){
 
 var report= document.getElementById('displayLocations');
 
-LocationDetails.prototype.render=function(){
-
-};
-
 for (var i=0; i<5; i++){
   locationDetailsArray[i].calculateRandomCustomersHourly();
   locationDetailsArray[i].calculateRandomCookiesHourly();
-  locationDetailsArray[i].render('salesList'+(i+1));
 }
 timeHeader();
 fillWithCookies();
