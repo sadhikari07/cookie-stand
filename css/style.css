@@ -1,5 +1,5 @@
 body{
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/35/Taiyaki.jpg');
+  background-image: url('../img/Taiyaki1.jpg');
   background-size: cover;
 }
 ul{
@@ -35,4 +35,18 @@ header{
 #headerControl{
 display: inline-block;
 align-content: space-between;
+}
+
+table, th, td{
+box-align: center;
+border: solid 2px rgb(29, 9, 9);
+border-spacing: 5px
+}
+th, td{
+  background-color:ivory;
+}
+
+table{
+  width: 85%;
+
 }
