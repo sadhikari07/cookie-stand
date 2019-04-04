@@ -47,7 +47,6 @@ function randomNumberGenerator(min, max){
   return Math.floor(Math.random()*(max-min+1))+min;
 }
 
-var totalSalesDailyAdd=0;
 var eachHourstotal=0;
 
 //The following calculates the total sales done at each stores combined per hour and put it in an array
@@ -82,14 +81,26 @@ function handleInputs(event){
   var minimumHourly=parseInt(event.target.min_sale.value);
   var maximumHourly=parseInt(event.target.max_sale.value);
   var averageHourly=parseInt(event.target.avg_sale.value);
+  if(maximumHourly<minimumHourly){
+    alert('Maximum number of cookies cannot be smaller than minimum number of cookies');
+  }
+  else{
 
-  var newData= new LocationDetails(newStore, minimumHourly, averageHourly, maximumHourly, [], [], 0);
-  locationDetailsArray.push(newData);
+    var newData= new LocationDetails(newStore, minimumHourly, averageHourly, maximumHourly, [], [], 0);
+    locationDetailsArray.push(newData);
 
-  newData.calculateRandomCustomersHourly();
-  newData.calculateCookiesSalesHourly();
-  locationDetailsArray.calculateAllStoresHourly();
-  renderAllTable();
+    
+    //renderAllTable();
+    report.innerHTML='';
+    totalSalesHourly=[];
+    salesTotalHourly = 0;
+    newData.calculateRandomCustomersHourly();
+    newData.calculateCookiesSalesHourly();
+    locationDetailsArray.calculateAllStoresHourly();
+    timeHeader();
+    fillWithCookies();
+    console.log('total sales hourly ' + totalSalesHourly);
+  }
 }
 var newStore=document.getElementById('new-store');
 newStore.addEventListener('submit', handleInputs);
