@@ -14,7 +14,27 @@
       <img id='leftImage' src="./img/salmon_new1.png"  >
     </div>
   </header>
+  <form id= "new-store">
+    <fieldset>
+      <legend>Create your new store here</legend>
+      <label for="where">Where:</label>
+      <input name="where" type="text" size="30" placeholder="Where" required/>
 
+      <label for="max_sale">Maximum</label>
+      <input name="max_sale" type= "text" size="30" placeholder="Maximum sales per hour" required/>
+
+      <label for="min_sale">Minimum</label>
+      <input name="min_sale" type= "text" size="30" placeholder="Minimum sales per hour" required/>
+
+      <label for="avg_sale">Average</label>
+      <input name="avg_sale" type= "text" size="30" placeholder="Average sales per hour" required/>
+
+      <button type="submit">Create new store</button>
+
+    </fieldset>
+  </form>
+
+  </form>
   <h2>Hourly cookie sales</h2>
   <table id="displayLocations"></table>
 
