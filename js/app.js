@@ -52,7 +52,7 @@ var eachHourstotal=0;
 //The following calculates the total sales done at each stores combined per hour and put it in an array
 var totalSalesHourly=[];
 var salesTotalHourly = 0;
-locationDetailsArray.calculateAllStoresHourly=function(){
+function calculateAllStoresHourly(){
   for(var i=0; i<operatingHours.length; i++){
     for (var j=0; j<locationDetailsArray.length; j++){
       eachHourstotal+=locationDetailsArray[j].cookiesSalesHourly[i];
@@ -62,18 +62,9 @@ locationDetailsArray.calculateAllStoresHourly=function(){
     eachHourstotal=0;
   }
   totalSalesHourly.push(salesTotalHourly);
-};
-//console.log('new array values  ' + locationDetailsArray[5].cookiesSalesHourly[]);
-
-//The following function removes the previously loaded table and replaces it with new table with user's input data.
-function renderAllTable(){
-  report.innerHTML='';
-  timeHeader();
-  fillWithCookies();
 }
 
 //Create Handlers for all parameteres:
-//Handler for name of location:
 
 function handleInputs(event){
   event.preventDefault();
@@ -89,14 +80,12 @@ function handleInputs(event){
     var newData= new LocationDetails(newStore, minimumHourly, averageHourly, maximumHourly, [], [], 0);
     locationDetailsArray.push(newData);
 
-    
-    //renderAllTable();
     report.innerHTML='';
     totalSalesHourly=[];
     salesTotalHourly = 0;
     newData.calculateRandomCustomersHourly();
     newData.calculateCookiesSalesHourly();
-    locationDetailsArray.calculateAllStoresHourly();
+    calculateAllStoresHourly();
     timeHeader();
     fillWithCookies();
     console.log('total sales hourly ' + totalSalesHourly);
@@ -164,7 +153,7 @@ for (var i=0; i<locationDetailsArray.length; i++){
   locationDetailsArray[i].calculateRandomCustomersHourly();
   locationDetailsArray[i].calculateCookiesSalesHourly();
 }
-locationDetailsArray.calculateAllStoresHourly();
+calculateAllStoresHourly();
 timeHeader();
 fillWithCookies();
 
