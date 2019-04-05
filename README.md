@@ -21,3 +21,10 @@ We started using loops to help us minimize the lines of codes we were writing.
 
 I referenced Sam's codes from classroom activity ery much to help me get this project right. 
 Dana had to guide me through each steps and much thanks to her, this project is up and running.
+
+
+
+
+
+
+https://github.com/codefellows/seattle-201d56/tree/master/class-09/lab-b/assets
